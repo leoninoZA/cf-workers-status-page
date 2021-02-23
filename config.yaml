@@ -1,6 +1,6 @@
 settings:
   title: 'Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
+  url: 'https://status-page.complianceonline.co.za' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
@@ -23,15 +23,21 @@ monitors:
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: www-complianceonline-co-za
+    name: www.complianceonline.co.za
+    description: 'Compliance Online website.'
+    url: 'https://www.complianceonline.co.za'
     method: GET
     expectStatus: 200
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: ello
+    name: ELLO - Everyone Love Learning Online
+    url: 'https://ello.complianceonline.co.za/'
+    method: GET
+    expectStatus: 200
+
+  - id: policy-passport
+    name: Policy Passport
+    url: 'https://admin.policypassport.com/'
     method: GET
     expectStatus: 200
