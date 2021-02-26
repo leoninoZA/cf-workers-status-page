@@ -1,8 +1,8 @@
 settings:
   title: 'Status Page'
-  url: 'https://status-page.complianceonline.co.za' # used for Slack messages
+  url: 'https://status.complianceonline.co.za' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
-  daysInHistogram: 90 # number of days you want to display in histogram
+  daysInHistogram: 60 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
   allmonitorsOperational: 'All Systems Operational'
@@ -31,13 +31,22 @@ monitors:
     expectStatus: 200
 
   - id: ello
-    name: ELLO - Everyone Love Learning Online
+    name: ello.complianceonline.co.za
+    description: 'Everyone Loves Learning Online LMS and e-learning'
     url: 'https://ello.complianceonline.co.za/'
     method: GET
     expectStatus: 200
 
   - id: policy-passport
-    name: Policy Passport
+    name: admin.policypassport.com
+    description: 'Policy Passport - Document tracking and attestation tool'
     url: 'https://admin.policypassport.com/'
+    method: GET
+    expectStatus: 200
+
+  - id: vervet-alert
+    name: vervetalert.com
+    description: 'Dawn Raid Alert system'
+    url: 'https://vervetalert.com.com/'
     method: GET
     expectStatus: 200
